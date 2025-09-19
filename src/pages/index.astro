@@ -5,6 +5,7 @@ import "../styles/global.css";
 
 import profileImage from "../assets/profile.jpg";
 import ucscImage from "../assets/ucsc_img.jpeg";
+import Tag from '../components/tag.astro'
 
 const interests = [
   "Linux",
@@ -27,7 +28,7 @@ const interests = [
         <div>
           <Image
             src={ucscImage}
-            class="max-h-[300px] scale-110 w-full object-cover rounded-xl outline-2 outline-primary outline-offset-4"
+            class="max-h-[300px] md:scale-110 w-full object-cover rounded-xl outline-2 outline-primary outline-offset-4"
             alt="Image of UC Santa Cruz from above"
           />
         </div>
@@ -35,15 +36,15 @@ const interests = [
           <Image
             src={profileImage}
 			alt="my profile picture"
-            class="w-48 h-48 bg-gray-200 absolute bottom-0 translate-y-[50%] rounded-2xl border-background border-8"
+            class="w-32 h-32 md:w-48 md:h-48 bg-gray-200 absolute bottom-0 translate-y-[50%] rounded-2xl border-background border-8"
           />
         </div>
       </div>
     </div>
-    <div class="translate-x-52 text-3xl translate-y-3 font-bold">
+    <div class="md:translate-x-52 text-3xl translate-y-12 md:translate-y-3 font-bold">
       Siddhant Madhur
     </div>
-    <div class="translate-x-52 max-w-[800px] opacity-90">
+    <div class="md:translate-x-52 max-w-[800px] opacity-90 mt-8 md:mt-0">
       I'm an undergrad at <span
         class="text-primary underline underline-offset-2"
         >University of California, Santa Cruz</span
@@ -51,16 +52,14 @@ const interests = [
       My passion lies in Operating Systems, Game Engines and other low-level programming
       fields. You can search my name on most social medias to contact me.
     </div>
-    <div class="translate-x-52 flex gap-3 font-semibold">
+    <div class="md:translate-x-52 flex gap-3 flex-wrap font-semibold">
       {
         interests.map((interest) => (
-          <div class="px-3 py-0.5 bg-primary/40 w-fit rounded-sm text-sm">
-            {interest}
-          </div>
+			<Tag>{interest}</Tag>
         ))
       }
     </div>
-    <div class="mx-16 mt-5">
+    <div class="mx-3 md:mx-16 mt-5">
       <div class="text-2xl font-bold mb-3">Experiences</div>
       <div>
         <div class="text-2xl font-semibold">Google</div>
