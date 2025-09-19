@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #181D23;
+    --color-text: #EFEFEF;
+    --color-primary: #0CC4CD;
+    --color-secondary: #4D525A;
+    --color-accent: #22272D;
+}
+
+a {
+    @apply hover:text-primary transition;
+}
