@@ -1,6 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+
+import profileImage from "../assets/profile.jpg";
+import ucscImage from "../assets/ucsc_img.jpeg";
 
 const interests = [
   "Linux",
@@ -21,15 +25,16 @@ const interests = [
     <div>
       <div class="relative">
         <div>
-          <img
-            src="/public/assets/ucsc_img.jpeg"
+          <Image
+            src={ucscImage}
             class="max-h-[300px] scale-110 w-full object-cover rounded-xl outline-2 outline-primary outline-offset-4"
-            alt=""
+            alt="Image of UC Santa Cruz from above"
           />
         </div>
         <div>
-          <img
-            src="/public/assets/profile.jpg"
+          <Image
+            src={profileImage}
+			alt="my profile picture"
             class="w-48 h-48 bg-gray-200 absolute bottom-0 translate-y-[50%] rounded-2xl border-background border-8"
           />
         </div>
